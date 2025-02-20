@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    flex-wrap: wrap; // Permite que las cartas se ajusten a múltiples filas
+    justify-content: flex-start; // Alinea las cartas a la izquierda
+    margin: 0 -10px; // Para compensar el margen de las cartas
+  }
+  
+  .card {
+    min-width: 300px;
+    max-width: 400px;
+    height: 225px;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    margin: 10px; // Espaciado entre las cartas
+  
+    &:hover,
+    &:focus {
+      transform-origin: bottom;
+      box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.5);
+    }
+  
+    &__article {
+      display: flex;
+      flex-direction: column; // Asegura que el contenido esté en columna
+      height: 100%; // Para que ocupe todo el alto de la carta
+      padding: 10px; // Espaciado interno
+      background-color: rgba(255, 255, 255, 0.8); // Fondo semitransparente para mejorar la legibilidad
+    }
+  
+    &__image-container {
+      height: 200px;
+      background-color: white;
+      overflow: hidden;
+  
+      &:hover,
+      &:focus {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+  
+    &__image {
+      object-fit: cover; // Cambiado a cover para que la imagen llene el contenedor
+      width: 100%;
+      height: 100%;
+    }
+  
+    // Estilos para el texto
+    h2 {
+      font-size: 1.2em; // Tamaño de fuente para el título
+      margin: 0; // Sin margen
+      color: #333; // Color del texto
+    }
+  
+    p {
+      font-size: 0.9em; // Tamaño de fuente para la descripción
+      color: #666; // Color del texto
+      margin-top: 5px; // Espaciado entre el título y la descripción
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .card {
+      width: calc(33.33% - 20px); // 3 columnas en pantallas grandes
+      height: 400px;
+  
+      &__image-container {
+        clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      width: calc(50% - 20px); // 2 columnas en pantallas medianas
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .card {
+      width: calc(100% - 20px); // 1 columna en pantallas pequeñas
+      height: auto; // Permitir que la altura se ajuste automáticamente
+  
+      &__article {
+        padding: 15px; // Aumentar el espaciado interno en pantallas pequeñas
+      }
+  
+      h2 {
+        font-size: 1.5em; // Aumentar el tamaño de fuente del título en pantallas pequeñas
+      }
+  
+      p {
+        font-size: 1em; // Aumentar el tamaño de fuente de la descripción en pantallas pequeñas
+      }
+    }
+  }
