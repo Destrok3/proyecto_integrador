@@ -1,69 +1,56 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; // Color de fondo
-}
+$primary-color: #be927c;
+$secondary-color: #333;
+$background-color: #f5f5dc;
+$text-color: #666;
 
-header {
-    background-color: #333; // Color de fondo del encabezado
-    color: white; // Color del texto
-    padding: 20px;
-    text-align: center;
-
-    h1 {
-        margin: 0;
-        font-size: 2.5em; // Tamaño del título
-    }
-
-    p {
-        font-size: 1.2em; // Tamaño del subtítulo
-    }
-}
-
-.container {
+.about-page {
     display: flex;
-    flex-wrap: wrap; // Permite que las secciones se ajusten a múltiples filas
-    justify-content: flex-start; // Alinea las secciones a la izquierda
-    margin: 20px; // Margen alrededor del contenedor
-}
+    flex-direction: column;
+    align-items: center;
+    background-color: $background-color;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
 
-.about {
-    background-color: white; // Color de fondo de las secciones
-    border-radius: 5px; // Bordes redondeados
-    box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.3); // Sombra
-    padding: 20px; // Espaciado interno
-    margin: 10px; // Espaciado entre secciones
-    flex: 1 1 calc(33.33% - 20px); // 3 columnas en pantallas grandes
+    &__header {
+        text-align: center;
+        margin-bottom: 2rem;
 
-    h2 {
-        font-size: 1.5em; // Tamaño del título de la sección
-        margin-top: 0; // Sin margen superior
+        h1 {
+            color: $primary-color;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
     }
 
-    p {
-        font-size: 1em; // Tamaño del texto
-        color: #666; // Color del texto
+    &__content {
+        width: 100%;
+        margin-bottom: 2rem;
+
+        h2 {
+            color: $secondary-color;
+            font-size: 1.8em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: $text-color;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: $primary-color;
+        color: white;
+        border-radius: 0 0 15px 15px;
+
+        p {
+            margin: 0;
+        }
     }
 }
-
-footer {
-    text-align: center; // Centrar el texto del pie de página
-    padding: 10px;
-    background-color: #333; // Color de fondo del pie de página
-    color: white; // Color del texto
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-// Media Queries para Responsividad
-@media screen and (max-width: 768px) {
-    .about {
-        flex: 1 1 calc(50% - 20px); // 2 columnas en pantallas medianas
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .about {
-        flex: 1 1 100%; // 1 columna en pant

@@ -64,7 +64,7 @@
   
   @media screen and (min-width: 992px) {
     .card {
-      width: calc(33.33% - 20px); // 3 columnas en pantallas grandes
+      width: calc(33.33% - 20px);
       height: 400px;
   
       &__image-container {
@@ -75,25 +75,25 @@
   
   @media screen and (max-width: 768px) {
     .card {
-      width: calc(50% - 20px); // 2 columnas en pantallas medianas
+      width: calc(50% - 20px); 
     }
   }
   
   @media screen and (max-width: 480px) {
     .card {
-      width: calc(100% - 20px); // 1 columna en pantallas pequeñas
-      height: auto; // Permitir que la altura se ajuste automáticamente
+      width: calc(100% - 20px);
+      height: auto; 
   
       &__article {
-        padding: 15px; // Aumentar el espaciado interno en pantallas pequeñas
+        padding: 15px; 
       }
   
       h2 {
-        font-size: 1.5em; // Aumentar el tamaño de fuente del título en pantallas pequeñas
+        font-size: 1.5em; 
       }
   
       p {
-        font-size: 1em; // Aumentar el tamaño de fuente de la descripción en pantallas pequeñas
+        font-size: 1em; 
       }
     }
   }
