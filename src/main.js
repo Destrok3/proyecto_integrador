@@ -24,3 +24,5 @@ const start = () => {
     })
     contenedorProductos.innerHTML = html
 }
+
+window.addEventListener('DOMContentLoaded', start)
