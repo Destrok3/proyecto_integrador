@@ -4,10 +4,10 @@
     
 }
 
-.cards-container { /* Contenedor de las cartas de productos */
-    display: flex; /* Si pongo esto solamente, las cartas se ponen en fila, una al lado de la otra */
+.cards-container { 
+    display: flex; 
     flex-flow: row wrap;
     justify-content: center;
-    gap: 1rem; /* Defini un espacio entre cada card para separar */
+    gap: 1rem; 
 
 }
